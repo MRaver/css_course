@@ -7,8 +7,108 @@
   box-sizing: border-box;
 }
 
+/* ||KHAI BÁO BIẾN TOÀN CỤC */
+:root{
+  --mau-xanh-yeu-thich: #475569;
+  --header-footer-color: #1E293B;
+}
+
 /* || GENERAL STYLES */
 body {
   font: 1.5rem "Nunito", sans-serif;
   min-height: 100vh;
+
+  background-color: var(--mau-xanh-yeu-thich);
+  background-image: radial-gradient(whitesmoke,var(--mau-xanh-yeu-thich) );
+}
+
+header, nav, main, footer{
+  display: grid;
+  place-content: center;
+  grid-template-columns: 100%;
+  text-align: center;
+}
+
+header, footer{
+  position: sticky;
+  background-color: var(--header-footer-color);
+  color: whitesmoke;
+}
+
+header{
+  top: 0;
+}
+
+nav{
+  background-color: #fff;
+  color: black;
+  padding: 0.5rem;
+  border-bottom: 2px solid black;
+  
+}
+
+main {
+ flex-grow: 1;
+}
+
+footer {
+  bottom: 0;
+}
+
+/* || SMALL */
+@media screen and (min-width:576px){
+  body{
+    background-color: green;
+    background-image: radial-gradient(whitesmoke, green);
+  }
+  nav{
+    display: none ;
+  }
+}
+/* || MEDIUM  */
+@media screen and (min-width:768px){
+  body{
+    background-color: gold;
+    background-image: radial-gradient(whitesmoke, gold);
+  }
+  nav{
+    display: none ;
+  }
+}
+
+/* || LARGE  */
+@media screen and (min-width:992PX){
+  body{
+    background-color: firebrick;
+    background-image: radial-gradient(whitesmoke, firebrick);
+  }
+  nav{
+    display: none ;
+  }
+}
+
+/* || XL  */
+@media screen and (min-width:1200PX){
+  body{
+    background-color: rebeccapurple;
+    background-image: radial-gradient(whitesmoke, rebeccapurple);
+  }
+  nav{
+    display: none ;
+  }
+}
+
+/* || MOBILE DEVICE LANDSCAPE  */
+@media screen and (max-height: 425px) and(min-aspect-ratio: 7/4){
+  body{
+    background-color: dodgerblue;
+    background-image: radial-gradient(whitesmoke, dodgerblue);
+  }
+
+  h1, h2{
+    font-size: 1.5rem;
+  }
+  nav{
+    display: none ;
+  }
 }
