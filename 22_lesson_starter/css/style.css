@@ -18,12 +18,12 @@ body {
 }
 
 main {
-  flex-grow: 1;
+  align-items: center;
   display: flex;
   flex-flow: column nowrap;
-  justify-content: center;
-  align-items: center;
+  flex-grow: 1;
   gap: 1rem;
+  justify-content: center;
 }
 
 div {
